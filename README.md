@@ -52,17 +52,17 @@ Clone the WSL2 kernel source, copy `Microsoft/config-wsl` to `.config`, append t
 ## Usage
  
 ```bash
-python3 sniffer.py [output_file]
+python3 sniffsniff.py [output_file]
 ```
  
 If no output file is specified it defaults to `msd80_capture.log`. Run the sniffer first, then trigger the ISN read on your diagnostic tool. Hit Ctrl+C when the read completes.
  
 ```bash
 # Default output file
-python3 sniffer.py
+python3 sniffsniff.py
  
 # Named output file
-python3 sniffer.py my_capture.log
+python3 sniffsniff.py my_capture.log
 ```
  
 ---
