@@ -21,7 +21,7 @@ This tool passively sniffs the CAN bus while a diagnostic tool performs an ISN r
 - Bench harness for the MSD80 with 12V supply on connector A pins 1 and 46, ground on connector A pin 6
 - CAN-H and CAN-L tapped from connector B pins 27 and 48 respectively
 - Termination resistors: 120 ohm across CAN-H and CAN-L at each end of the bus. Do NOT enable the onboard termination resistor on the CANable when sniffing inline, you will have three terminators on the bus and it will cause communication errors
- 
+- A modified DB-19 cable was used for this purpose
 ---
  
 ## Software Requirements
@@ -106,7 +106,7 @@ The 137 byte response changes on every attempt due to session-based encryption e
 ## Repo Contents
  
 ```
-sniffer.py          CAN sniffer script
+sniffsniff.py       CAN sniffer script
 captures/           Raw capture logs from bench sessions
   msd80_*.log       Individual capture sessions
 README.md           This file
@@ -119,7 +119,6 @@ README.md           This file
 This tool was built as part of the "All Keys Lost: A Car Hacking Journey" talk presented at KernelCon 2026 in Omaha, NE.
  
 **@f8al / @SecurityShrimp**
-https://linktr.ee/f8al
  
 ---
  
