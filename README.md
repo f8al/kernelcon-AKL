@@ -1,7 +1,7 @@
 # Kernelcon 26: All Keys Lost: A Car Hacking Adventure
-## msd80-isn-sniffer
+## sniffsniff.py
  
-CAN bus sniffer and capture logs from the "All Keys Lost: A Car Hacking Journey" talk at KernelCon 2026.
+CAN bus sniffer and failed capture logs from the "All Keys Lost: A Car Hacking Journey" talk at KernelCon 2026.
  
 This repo contains the Python sniffer used to capture UDS diagnostic traffic between an Autel IM508S and a bench-mounted BMW MSD80 DME, along with the raw capture logs and analysis notes from the session.
  
@@ -9,7 +9,7 @@ This repo contains the Python sniffer used to capture UDS diagnostic traffic bet
  
 ## What This Is
  
-The MSD80 is a Siemens/Continental DME used in the BMW N54 engine (E90/E92 335i, E60 535i, E71 X6 35i and others). It communicates over PT-CAN at 500kbps and uses UDS (ISO 14229) over ISO-TP for diagnostic and programming functions including ISN read and security access.
+The MSD80 is a Siemens/Continental DME used in the BMW N54 engine (E90/E92 335i, E60 535i, E71 X6 35i and others). It was succeeded by the MSD81, and the MSD81 uses the same communication patterns and pin connections. It communicates over PT-CAN at 500kbps and uses UDS (ISO 14229) over ISO-TP for diagnostic and programming functions including ISN read and security access.
  
 This tool passively sniffs the CAN bus while a diagnostic tool performs an ISN read, capturing the full transaction so you can see exactly what is happening under the hood of a commercial key programming tool.
  
